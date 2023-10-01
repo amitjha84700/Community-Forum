@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+        <title>Devices | CommunityTechForum</title>
+    </head>
+    <body>
+        <link rel="stylesheet" type="text/css" href="style4Devices.css"/>
+
+        <a name="top"></a>
+
+        <!--Start Navhead-->
+        <div class="topnav">
+            <img id="pict" src="images/CTF.png" width="5%">
+            <a id="nav" href="index.html">NEWS</a>
+            <a id="nav" href="#">FORUMS</a>
+            <a id="nav" href="#">DEVICES</a>
+            <a id="nav" href="#">TOPICS</a>
+            <a id="logs" href="login.html">REGISTER</a>
+            <a id="logs" href="login.html">LOGIN</a>
+        </div>
+        <br>
+        <!--End Navhead-->
+        
+
+        <div>
+            <form>
+                <label for="cars">Choose a car:</label>
+                <select name="cars" id="cars">
+                  <optgroup label="Samsung">
+                    <option value="Note10">Galaxy Note 10</option>
+                    <option value="Note10+">Galaxy Note 10+</option>
+                    <option value="A51">Galaxy A51</option>
+                    <option value="M31">Galaxy M31</option>
+                  </optgroup>
+                  <optgroup label="Xiaomi">
+                    <option value="RN10">Redmi Note 10</option>
+                    <option value="RN10+">Redmi Note 10+</option>
+                    <option value="RN9">Redmi Note 9</option>
+                    <option value="RN9+">Redmi Note 9+</option>
+                    <option value="RN8">Redmi Note 8</option>
+                    <option value="RN8+">Redmi Note 8+</option>
+                  </optgroup>
+                </select>
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+
+        <h4 align="center" id="tanggal"></h4>
+        <div class="jam_digital" id="jam_digital">
+            <div class="kotak">
+                <p id="jam"></p>
+            </div>
+            <div class="kotak">
+                <p id="menit"></p>
+            </div>
+            <div class="kotak">
+                <p id="detik"></p>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var tgl = new Date();
+            document.getElementById("tanggal").innerHTML = "Waktu Akses "+tgl;
+            window.setTimeout("waktu()", 1000);
+            function waktu(){
+                var waktu = new Date();
+                setTimeout("waktu()", 1000);
+                document.getElementById("jam").innerHTML = waktu.getHours();
+                document.getElementById("menit").innerHTML = waktu.getMinutes();
+                document.getElementById("detik").innerHTML = waktu.getSeconds();
+            }
+        </script>
+
+        <!--Start Footer-->
+        <p align="center"><font face="Tw Cen MT Condensed Extra Bold"><b>Copyright @2022 Muhammad Zidan Ramdhani</b></font></p>
+        <div class="content2">
+            <a href="#top"><font face="Roboto" color="black">Back To Top</font></a>
+        </div>
+        <!--End Footer-->
+    </body>
+</html>
